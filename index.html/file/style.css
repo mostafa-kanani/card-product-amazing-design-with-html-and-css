@@ -1,187 +1,136 @@
 *{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 body{
-  background: #131419;
-  overflow:hidden; 
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex; 
+  margin: 0;
+  padding: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: #f6f6f6;
 }
-.container{
-  width: 380px;
-  height: px;
-  background: #131419;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
+:root{
+--shadow-color:  13px 13px 30px #cbced1, 
+-13px -13px 20px #fff;
+}
+.container {
+  width: 890px;
+  height: 500px;
+  background: #fff; 
+  box-shadow: 3px 3px 10px #555;
   border-radius: 10px;
+  overflow: hidden;
 }
-.title{
-  text-align: center;
-  color: #fff;
-  margin-top: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-  font-size: 20px;
-  text-shadow:  -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
+.picture-product {
+  float: left;
 }
-h3{
-  color: #555;
-  font-size: 15px;
-  margin-top: 16px;
-}
-.username,.password{
-  text-align:center; 
-  margin-top: 50px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  color: #fff;
-}
-input[type="username"],[type="password"]{
-  outline: none;
-  border: none;
-  background: #131419;
-  text-align: center;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
-  width: 270px;
-  height: 50px;
-  border-radius: 10px;
-  font-size: 20px;
-  color: #fff;
-}
-input[type="email"]{
-  outline: none;
-  border: none;
-  background: #131419;
-  text-align: center;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
-  width: 270px;
-  height: 50px;
-  border-radius: 10px;
-  font-size: 20px;
-  margin-top: 3rem;
-  margin-left: 56px;
-  color: #fff;
-}
-.password-2{
-  margin-top: 3rem;
-  margin-left: 56px;
-}
-input[type="checkbox"]{
-  width: 30px;
-  height: 30px;
-  background: #131419;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
-  margin-top: 1rem;
+img:only-child{
+  object-fit: cover;
   margin-left: 1rem;
+  margin-top: 1rem;
+  box-shadow: var(--shadow-color); 
+  background-color: #ecf0f3;
+  width: 380px;
+  border-radius: 10px;
 }
-span{
-   color: #fff;
-   text-transform: capitalize;
-   font-family: Arial, Helvetica, sans-serif;
-   letter-spacing: 1px;
+/*shadow for picture product */
+.all-color{
+  margin-right: 35px;
+  box-shadow: var(--shadow-color);
 }
-.text{
-  margin-left: 4rem;
-  margin-top: -25px;
-  text-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
+#color-1 {
+  width: 20px;
+  height: 20px;
+  background: rgb(65, 105, 225);
+  border-radius: 50%;
+  float: right;
+  cursor: pointer;
+  margin: 30px;
 }
-.another-way-for-sign-up{
+#color-2 {
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 250, 154); 
+  border-radius: 50%;
+  float: right;
+  cursor: pointer;
+  margin: 30px;
+}
+#color-3 {
+  width: 20px;
+  height: 20px;
+  background: rgb(147, 112, 219); 
+  border-radius: 50%;
+  float: right;
+  cursor: pointer;
+  margin: 30px;
+}
+#color-4 {
+  width: 20px;
+  height: 20px;
+  background: rgb(75, 0, 130); 
+  border-radius: 50%;
+  float: right;
+  cursor: pointer;
+  margin: 30px;
+}
+/*color for product */
+.title-card {
   text-align: center;
-  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+}
+.title {
+  margin-top: 135px;
+  font-size: 32px;
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  pointer-events: none;
+  user-select: none;
+}
+.paragrath {
   text-transform: capitalize;
   font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 1xp;
-  margin-top: 1rem;
+  color: #000;
+  font-size: 15px;
+  line-height: 40px;
+  text-shadow: 5px 5px 10px var(--shadow-color); 
+  overflow-wrap: normal;
+  pointer-events: none;
+  user-select: none;
 }
+/*explain about product */
+
 .btn {
-  margin-top: 30px;
   text-align: center;
+  transition: all 0.4s linear;
 }
-button[type="button"]{
+button[type="submit"] {
   outline: none;
   border: none;
-  background:orangered;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
-  width: 250px;
+  background: dodgerblue;
+  border-radius: 10px;
+  width: 180px;
   height: 50px;
+  padding:15px;
+  cursor: pointer;
   color: #fff;
   font-size: 20px;
-  text-transform: capitalize;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  border-radius: 10px;
-  cursor: pointer;
+  text-transform: capitalize; 
+  box-shadow: var(--shadow-color);
+  margin-top: 15px;
   transition: all 0.4s ease;
 }
-button[type="button"]:focus{
-  width: 300px; 
+button[type="submit"]:hover{
+  background: deepskyblue;
   transition: all 0.4s ease;
 }
-/*code-login-form*/
-.media{
-  margin-top: 3px;
-  text-align: center;
-  font-size: 29px;
+button[type="submit"]:focus{
+  width: 380px;
+  transition: all 0.4s ease;
 }
-.fa-instagram:nth-child(2){
-  color: crimson;
-  cursor: pointer;
-  margin: 10px;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-radius:50%; 
-}
-
-.fa-facebook:nth-child(4){
-  color: dodgerblue;
-  cursor: pointer;
-  margin: 10px;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-radius:50%; 
-}
-.fa-github:nth-child(6){
-  color: cornflowerblue;
-  cursor: pointer;
-  margin: 10px;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-  5px 5px 15px rgba(0, 0, 0, 0.5);
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  border-radius:50%; 
-}
-/*frontend_mostafa*/
-
-
-
-
-
-
-
-
-
-
-
-
+/*button for buy product */
 
 
 
